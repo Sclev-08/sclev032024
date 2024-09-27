@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Positioning</title>
+    <style>
+        #pageheader{
+            background-color: lightblue;
+            min-height: 200px;
+            position: relative;
+        }
+        #logo{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 32.5px);
+            transition: 1s;
+            background-image:url(logocolore.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media screen and (min-width: 900px)
+        {
+            body{
+                background-color: lightgreen;
+            }
+            #logo{
+                left:25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Positioning</h1>
+
+    <section id="pageheader">
+        <div id="logo"></div>
+    </section>
+</body>
+</html>
