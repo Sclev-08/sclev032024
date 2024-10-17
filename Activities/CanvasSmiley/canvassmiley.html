@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas Arc</h1>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Create canvas for 2d drawing
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Configure canvas
+        canvas.width = 400;
+        canvas.height = 400;
+        // Styles
+        canvas.style.border = '2px solid black';
+        canvas.style.margin = 'auto';
+        canvas.style.display = 'block';
+        canvas.style.backgroundColor = "black";
+
+        ctx.lineWidth = 10;
+        ctx.fillStyle = "#FFCD54";
+        ctx.beginPath();
+        ctx.arc(200, 200, 200, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 20;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(200, 220, 125, 0, 3.14);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 20;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(120, 125, 15, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 20;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(280, 125, 15, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>
