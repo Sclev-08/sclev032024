@@ -6,15 +6,15 @@
     <title> Scout Cleveland's Page </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sofadi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sofadi+One&display=swapfamily=Jersey+10&display=swap" rel="stylesheet">
     <style>
     
     html {
     scroll-behavior: smooth;
-    cursor: pointer;
-    cursor: help;
-    cursor: progress;
     cursor: url(Images/butterflycursor.gif), auto;
+    }
+    a{
+        cursor: url(Images/butterflyclick.gif), auto;
     }
     
     *{padding: 0;}
@@ -78,12 +78,12 @@ h2{
 }
 #pagenav{
     min-height: 40px;
-    width: 300px;
+    width: 350px;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: calc(50% - 150px);
+    left: calc(50% - 175px);
     bottom: 20px;
     justify-content: space-evenly;
     transition-property: color;
@@ -138,7 +138,7 @@ h2{
     text-align: center;
     font-size: 3rem;
     font-weight:normal;
-    font-family: var(--text-font);
+    font-family: var(--primary-font);
     letter-spacing: .25rem;
     margin-bottom: 0px;
     margin-top: 10%;
@@ -221,7 +221,7 @@ h2{
     min-height: 200px;
     background: rgb(155,227,251);
     background: linear-gradient(180deg, rgba(155,227,251,1) 0%, rgba(113,158,247,1) 100%);
-    color: #719ef7;
+    color: #5f88d9;
     padding: 1rem;
     position: relative;
     font-family: var(--primary-font);
@@ -230,10 +230,27 @@ h2{
     min-height: 200px;
     background: rgb(155,227,251);
     background: linear-gradient(0deg, rgba(155,227,251,1) 0%, rgba(113,158,247,1) 100%);
-    color: #719ef7;
+    color: #5f88d9;
     padding: 1rem;
     position: relative;
     font-family: var(--primary-font);
+    display: none;
+}
+#keywork{
+    min-height: 200px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(224, 221, 204) 0%, rgb(255, 253, 241) 100%);
+    color: #39a639;
+    padding: 1rem;
+    font-family: var(--text-font);
+    box-shadow: inset #e0ddcc 0px 0px 10px 5px;
+}
+.footerlinks{
+    display: none;
+}
+#flexsubfooter h3{
+letter-spacing: 1px;
+font-weight: normal;
 }
 .classwork{
     text-align: center;
@@ -362,7 +379,18 @@ h2{
 /* end link colors */
 
         /* Media queries */
-        @media screen and (min-width: 900px){
+        @media screen and (min-width: 768px){
+            .footerlinks{
+                display: block;
+                min-width: 200px;
+            }
+            #flexsubfooter{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @media screen and (min-width: 1024px){
             #logo{
                 left:0px;
                 top: 0px;
@@ -421,7 +449,8 @@ h2{
     <nav id="pagenav">
     <a href="#career">Career</a>
     <a href="#semester1">Semester 1</a>
-    <a href="#semester2">Semester 2</a>
+    <!-- <a href="#semester2">Semester 2</a> -->
+    <a href="#keyassignments">Key Work</a>
     </nav>
     <div id="pagequote">
         <quote id="quotetext">"You should sing on and hope the notes will keep coming."</quote>
@@ -465,7 +494,7 @@ h2{
     <main id="pagecontent">
     <div class="container">
         <h2>Welcome to my page!</h2>
-        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtube.com" >One Piece</a> and <a href="https://youtube.com" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them!</p>
+        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/Av7XMTdTwFE?si=6ziMJ9RUDUei-_vj&t=3" >One Piece</a> and <a href="https://youtube.com" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them!</p>
     </div>
     </main>
     <!-- end pagecontent -->
@@ -501,7 +530,17 @@ h2{
     <div id="musicdivider"></div>
     </section>
     <!-- end semester2 -->
-    
+
+        <!-- begin keywork -->
+        <div id="keywork">
+            <div class="container">
+                <a name="keywork"></a>
+                <h2>Key work</h2>
+                <p id="key">key work</p>
+            </div>
+            </div>
+            <!-- end keywork -->
+
     <!-- begin pagefooter -->
     <footer id="pagefooter">
     <div class="container">
@@ -519,7 +558,25 @@ h2{
     
     <!-- begin subfooter -->
     <footer id="subfooter">
-    <div class="container">SubFooter
+    <div class="container">
+<div id="flexsubfooter">
+            <div class="quote">
+                <h3>Final Thoughts</h3>
+                <blockquote>
+                    "There is a child inside you <br> who's trying to raise a child inside me."
+                </blockquote>
+                <p>- Adrianne Lenker</p>
+            </div>
+            <div class="footerlinks">
+                <h3>Links</h3>
+                <ul>
+                    <li>Career</li>
+                    <li>Semester1</li>
+                    <li>Key Assignments</li>
+                </ul>
+            </div>
+</div>
+
         <div id="b-k"></div>
     </div>
     </footer>
