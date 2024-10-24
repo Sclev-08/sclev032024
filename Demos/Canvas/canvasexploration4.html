@@ -87,10 +87,10 @@
 
         btnCreateRectangle.addEventListener('click', function() {
         ctx.fillStyle = "blue";
-        ctx.fillRect(100, 100, 200, 200);
+        ctx.fillRect(200, 100, 100, 200);
         ctx.strokeStyle = "blue";
         ctx.lineWidth = 15;
-        ctx.strokeRect(100, 100, 200, 200);
+        ctx.strokeRect(200, 100, 100, 200);
         })
         
         btnCreateTriangle.addEventListener('click', function(){
@@ -104,9 +104,9 @@
 
             //Start the drawing (draw lines)
             ctx.beginPath()
-            ctx.moveTo(100, 100);
-            ctx.lineTo(200, 100);
-            ctx.lineTo(150, 0);
+            ctx.moveTo(200, 200);
+            ctx.lineTo(300,200);
+            ctx.lineTo(250, 100);
             ctx.stroke();
             ctx.fill();
         })
@@ -117,7 +117,8 @@
         ctx.lineWidth = 10;
 
         ctx.beginPath();
-        ctx.arc(100, 30, 75, 0, 3.14, false);
+    
+        ctx.arc(200, 220, 125, 0, 3.14, false);
         ctx.fill();
         ctx.stroke();
         })
@@ -149,11 +150,12 @@
         })
 
         btnClear.addEventListener('click', function() {
-        ctx.fillStyle = "pink";
-        ctx.fillRect(100, 100, 200, 200);
-        ctx.strokeStyle = "pink";
-        ctx.lineWidth = 400;
-        ctx.strokeRect(100, 100, 200, 200);
+        // ctx.fillStyle = "pink";
+        // ctx.fillRect(100, 100, 200, 200);
+        // ctx.strokeStyle = "pink";
+        // ctx.lineWidth = 400;
+        // ctx.strokeRect(100, 100, 200, 200);
+        ctx.clearRect (0, 0, canvas.width, canvas.height);
         })
     </script>
 </body>
