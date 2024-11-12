@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing 1</title>
+</head>
+<body>
+    <h1>Canvas Drawing 1</h1>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        // Create canvas for 2d drawing
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Configure canvas
+        canvas.width = 600;
+        canvas.height = 600;
+        // Styles
+        canvas.style.border = '2px solid black';
+        canvas.style.margin = 'auto';
+        canvas.style.display = 'block';
+        canvas.style.backgroundColor = "palevioletred";
+
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(300, 200, 100, 3.14, false);
+        ctx.lineTo(400, 400);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(439, 386, 40, 1, 3, false);
+        ctx.stroke();
+
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(356, 260, 190, 1, 2, false);
+        ctx.stroke();
+    </script>
+</body>
+</html>
