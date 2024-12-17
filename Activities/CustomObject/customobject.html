@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nami Object</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nami Object</h1>
+    <script>
+        // All objects have properties and methods
+        // Window Object
+        // window.innerWidth is a property
+        // window.alert() is a method of the window object
+        // Document Object
+        // document.title is a prop
+        // document.write is a method
+        
+        /*
+        Methods and Functions are the same
+        Methods are functions that are for a specific object
+        */
+
+        // Creating Custom Objects
+
+        const NAMI = 
+        {
+            name: 'Nami',
+            age: 20,
+            height: "5'7",
+            eyecolor: "brown",
+            birthday: "July 3rd",
+            epithet: '"Cat Burglar"',
+            role: "Navigator",
+            favoritefood: "Tangerines",
+            isAlive: true,
+            isHappy: true,
+            image: '<img src="https://i.pinimg.com/originals/db/3e/d4/db3ed425e60ba82db0b5547c65d03f98.png" height="300px">',
+            attack: function(){return '"Thunder Breed Tempo!"'},
+            quote: function(){return '"Everyones weak when they hesitate."'},
+            captain: function(){return '"Luffy will never stop until he is King of the Pirates...!"'},
+        }
+
+        // Examine Nami
+        window.document.write(NAMI.name + '<br>');
+        window.document.write(NAMI.age + '<br>');
+        window.document.write(NAMI.height + '<br>');
+        window.document.write(NAMI.birthday + '<br>');
+        window.document.write(NAMI.epithet + '<br>');
+        window.document.write(NAMI.image + '<br>');
+        window.document.write(NAMI.attack() + '<br>');
+        window.document.write(NAMI.quote() + '<br>');
+        window.document.write(NAMI.captain() + '<br>');
+
+    </script>
+</body>
+</html>
