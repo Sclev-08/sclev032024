@@ -396,8 +396,81 @@ font-weight: normal;
 #pagefooter .container>a:hover{
     color: #ef661e;
 }
+#semester1 a{
+    color: white;
+    transition: .5s;
+    text-decoration: none;
+}
+#semester1 a:hover{
+    color: palegreen;
+}
+#semester1 a:visited{
+    color: #5f88d9;
+}
+#semester1 a:visited:hover{
+    color: white;
+}
 /* end link colors */
+        /* Parcie doll */
+        #parcie{
+            position: absolute;
+            height: 200px;
+            width: 100px;
+            background-image: url(Images/parcie.png);
+            background-size: contain;
+            bottom: 0px;
+            left: 70px;
+            filter: brightness(110%);
+            display: none;
+            opacity: 0;
+        }
+        #messagedisplay{
+            position: absolute;
+            min-height: 50px;
+            width: 200px;
+            border: 2px solid #26488C;
+            padding: 5px;
+            box-sizing: border-box;
+            background-color: #fffdf1;
+            font-family:var(--primary-font);
+            font-size: large;
+            letter-spacing: 3px;
+            bottom: 230px;
+            left: 20px;
+            opacity: 0;
+            transition: .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
+        .shake{
+            animation-name: shake;
+            animation-duration: .5s;
+            animation-iteration-count: 1;
+            animation-timing-function:ease-in-out;
+        }
+        @keyframes shake{
+
+            0%{bottom: 0px;}
+            20%{bottom: 10px;}
+            100%{bottom: 0px;}
+
+        }
+
+        .appear{
+            animation-name: appear;
+            animation-duration: .5s;
+            animation-iteration-count: 1;
+            animation-timing-function:ease-in-out;
+        }
+        @keyframes appear{
+
+            0%{bottom: 220px;}
+            100%{bottom: 230px;}
+        }
+        /* End Parcie doll */
         /* Media queries */
         @media screen and (min-width: 768px){
             .footerlinks{
@@ -454,6 +527,10 @@ font-weight: normal;
             #mobilequote, #mobilecredit{
                 opacity: 0;
             }
+            #parcie{
+                display: block;
+                opacity: 1;
+            }
         }
         /* End media queries */
     </style>
@@ -490,6 +567,9 @@ font-weight: normal;
         <p id="mediap"> click once to play, click twice to pause</p>
         <audio id="angeloflove" src="Audio/angeloflovecalicrisis.mp3"></audio>
         <button id="musicplayer" onclick="playMusic()" ondblclick="pauseMusic()"></button>
+        <div id="messagedisplay"></div>
+        <div id="parcie"></div>
+        <audio id="sfx" src="Audio/starling.mp3"></audio>
     </section>
     <!-- end media -->
     
@@ -514,7 +594,7 @@ font-weight: normal;
     <main id="pagecontent">
     <div class="container">
         <h2>Welcome to my page!</h2>
-        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/Av7XMTdTwFE?si=6ziMJ9RUDUei-_vj&t=3" >One Piece</a> and <a href="https://youtube.com" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them!</p>
+        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/MUpIXeZJyYo?si=tSOMijXxE7SJSVR-&t=4" >One Piece</a> and <a href="https://www.youtube.com/watch?v=Pe0NA10jk78" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them!</p>
     </div>
     </main>
     <!-- end pagecontent -->
@@ -525,7 +605,7 @@ font-weight: normal;
     <a name="semester1"></a>
     <h2>Semester1</h2>
     <ul class="classwork">
-        <li>Canvas Drawing</li>
+        <li><a href="Activities/CanvasDrawing1/canvasdrawing1.html">Canvas Drawing</a></li>
         <li><a href="Activities/CanvasDrawing2/canvasdrawing2.html">Canvas Drawing 2</a></li>
         <li><a href="Activities/CustomObject/customobject.html">Custom Object</a></li>
     </ul>
@@ -616,6 +696,60 @@ font-weight: normal;
             function pauseMusic(){
                     audio.pause();
             }
+
+            // Begin doll
+
+            let messageDisplay
+            messageDisplay = window.document.querySelector("#messagedisplay");
+                const doll = window.document.querySelector("#parcie");
+                const sfx = window.document.querySelector("#sfx")
+                doll.addEventListener('click', respond);
+
+                function respond(){
+            doll.classList.add("shake");
+            sfx.play();
+
+            window.setTimeout(function () {
+            doll.classList.remove("shake");
+            }, 500);
+
+            window.setTimeout(updateMessage, 100);
+        function updateMessage(){
+            messageDisplay.classList.add("appear");
+            messageDisplay.style.opacity = "1";
+
+            let messageText = [];
+            // Create messages to display
+            messageText[0] = "<p>Stop poking me please!</p>";
+            messageText [1] = "<p>Hiii!!</p>";
+            messageText [2] = "<p>𝓕𝓡𝓔𝓔 𝓥𝓑𝓤𝓒𝓚𝓢 𝔽ℝ𝔼𝔼 𝕍𝔹𝕌ℂ𝕂𝕊 you could get up to ₂₀₀,₀₀₀ 𝓋𝔟𝔲𝔠𝔨𝔰 FREE OF CHARGE if you follow 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙺</p>";
+            messageText [3] = "<p>Need something?</p>";
+            messageText [4] = "<p>Nice to meet you!</p>";
+            messageText [5] = "<p>Oh- er-!</p>";
+            messageText [6] = "<p>Sure!</p>";
+            messageText [7] = "<p>Cute!</p>";
+            messageText [8] = "<p>Yep!</p>";
+            messageText [9] = "<p>Oh..</p>";
+            messageText [10] = "<p>How are you?</p>";
+            messageText [11] = "<p>Okay, back up!</p>";
+            messageText [12] = "<p>What's up?</p>";
+            messageText [13] = "<p>𝓕𝓡𝓔𝓔 𝓥𝓑𝓤𝓒𝓚𝓢 𝔽ℝ𝔼𝔼 𝕍𝔹𝕌ℂ𝕂𝕊 you could get up to ₂₀₀,₀₀₀ 𝓋𝔟𝔲𝔠𝔨𝔰 FREE OF CHARGE if you follow 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙺</p>";
+            messageText [14] = "<p>𝓕𝓡𝓔𝓔 𝓥𝓑𝓤𝓒𝓚𝓢 𝔽ℝ𝔼𝔼 𝕍𝔹𝕌ℂ𝕂𝕊 you could get up to ₂₀₀,₀₀₀ 𝓋𝔟𝔲𝔠𝔨𝔰 FREE OF CHARGE if you follow 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙺</p>";
+
+            //window.alert(messageText.length)
+            let randomNum;
+            randomNum = Math.floor( Math.random() * messageText.length );
+
+            // window.alert(messageText[randomNum]);
+
+            // Display the random message
+            messageDisplay.innerHTML = messageText[randomNum];
+        window.setTimeout(eraseMessage, 3000);
+        function eraseMessage(){
+            messageDisplay.style.opacity = "0";
+        }
+    }
+    }
     </script>
     <!-- end script -->
     </body>

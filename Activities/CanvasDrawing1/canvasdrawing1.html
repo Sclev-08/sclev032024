@@ -16,7 +16,7 @@
 
         // Configure canvas
         canvas.width = 600;
-        canvas.height = 600;
+        canvas.height = 500;
         // Styles
         canvas.style.border = '2px solid black';
         canvas.style.margin = 'auto';
@@ -28,18 +28,44 @@
         ctx.beginPath();
         ctx.arc(300, 200, 100, 3.14, false);
         ctx.lineTo(400, 400);
+        ctx.lineTo(200, 400);
+        ctx.lineTo(200, 200);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(250, 200, 10, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(350, 200, 10, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.lineWidth = 5;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(300, 240, 10, 0, Math.PI * 2);
+        ctx.fill();
         ctx.stroke();
 
         ctx.lineWidth = 5;
         ctx.fillStyle = "white";
         ctx.beginPath();
-        ctx.arc(439, 386, 40, 1, 3, false);
+        ctx.arc(170, 200, 20, 0, Math.PI * 2);
+        ctx.fill();
         ctx.stroke();
 
         ctx.lineWidth = 5;
         ctx.fillStyle = "white";
         ctx.beginPath();
-        ctx.arc(356, 260, 190, 1, 4, false);
+        ctx.arc(430, 200, 20, 0, Math.PI * 2);
+        ctx.fill();
         ctx.stroke();
     </script>
 </body>

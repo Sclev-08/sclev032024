@@ -140,7 +140,14 @@
 
         CANVAS.addEventListener('mouseup', function(){
             painting = false;
+
+            let canvasData = CTX.getImageData(0, 0, CANVAS.width, CANVAS.height);
+            //alert(canvasData)
         });
+
+        window.addEventListener('resize', function(){
+            //alert('resized!')
+        })
     </script>
 </body>
 </html>
