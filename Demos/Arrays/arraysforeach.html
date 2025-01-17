@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays For Each</title>
+</head>
+<body>
+    <h1>Arrays  For Each</h1>
+    <script>
+        //  Cycle through array elements
+
+        let myCats;
+        myCats = []
+        
+        // Assign values to array
+        myCats[0] = "Fluffy" // index 0
+        myCats[1] = "Felix" // index 1
+        myCats[2] = "Garfield" // index 2
+        myCats[3] = "Heathcliff" // index 3
+
+        // myCats.push("Sylvester")
+        // myCats.push("Fido")
+
+        // console.log(myCats)
+
+        // myCats.pop();
+        // myCats.shift();
+
+        // myCats.unShift();
+
+/* Multi Line Comment - Notes
+
+forEach sllows you to cycle through an array
+
+myCats.forEach();
+myCats.forEach( function(cat){
+console.log("I love " + cat);
+});
+*/
+
+myCats.forEach(function(cat){
+    console.log("I love " + cat)
+})
+
+myCats.forEach( function(c){
+    console.log("I miss " + c);
+})
+
+    myCats.forEach( function(cn, index){
+        window.alert(cn + " is index " + index)
+    } );
+
+    </script>
+</body>
+</html>
