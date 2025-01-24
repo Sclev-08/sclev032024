@@ -254,7 +254,6 @@ h2{
     padding: 1rem;
     position: relative;
     font-family: var(--primary-font);
-    display: none;
 }
 #keywork{
     min-height: 200px;
@@ -276,7 +275,7 @@ font-weight: normal;
     text-align: center;
     list-style-type: none;
 }
-#four{
+#fourgraphic{
     position: absolute;
     background-image: url(Images/fourgraphic.png);
     width: 100px;
@@ -396,18 +395,35 @@ font-weight: normal;
 #pagefooter .container>a:hover{
     color: #ef661e;
 }
-#semester1 a{
+#semester1, a{
     color: white;
     transition: .5s;
     text-decoration: none;
 }
-#semester1 a:hover{
+#semester1, a:hover{
     color: palegreen;
 }
-#semester1 a:visited{
+#semester1, a:visited{
     color: #5f88d9;
 }
 #semester1 a:visited:hover{
+    color: white;
+}
+#semester2, a{
+    color: white;
+    transition: .5s;
+    text-decoration: none;
+}
+#semester2, a:hover{
+    color: palegreen;
+}
+#semester2, a:visited{
+    color: #5f88d9;
+}
+#semester2 a:visited:hover{
+    color: white;
+}
+.semester a:visited:hover{
     color: white;
 }
 /* end link colors */
@@ -564,9 +580,9 @@ font-weight: normal;
         <div id="tommytheturkey"><p>Let's get Funky with Tommy the Turkey</p></div>
         <blockquote id="mobilequote">"You should sing on and hope the notes will keep coming."</blockquote>
         <p id="mobilecredit">- Devi Mccallion</p>
-        <p id="mediap"> click once to play, click twice to pause</p>
+        <p id="mediap"> click twice to play, click once to pause</p>
         <audio id="angeloflove" src="Audio/angeloflovecalicrisis.mp3"></audio>
-        <button id="musicplayer" onclick="playMusic()" ondblclick="pauseMusic()"></button>
+        <button id="musicplayer" ondblclick="playMusic()" onclick="pauseMusic()"></button>
         <div id="messagedisplay"></div>
         <div id="parcie"></div>
         <audio id="sfx" src="Audio/starling.mp3"></audio>
@@ -603,15 +619,14 @@ font-weight: normal;
     <section id="semester1">
     <div class="container">
     <a name="semester1"></a>
-    <h2>Semester1</h2>
+    <h2>Semester 1</h2>
     <ul class="classwork">
         <li><a href="Activities/CanvasDrawing1/canvasdrawing1.html">Canvas Drawing</a></li>
         <li><a href="Activities/CanvasDrawing2/canvasdrawing2.html">Canvas Drawing 2</a></li>
         <li><a href="Activities/CustomObject/customobject.html">Custom Object</a></li>
-        <li><a href="Projects/paintingappv2.html">Painting App</a></li>
     </ul>
     </div>
-    <div id="four"></div>
+    <div id="fourgraphic"></div>
     </section>
     <!-- end semester1 -->
     
@@ -619,12 +634,9 @@ font-weight: normal;
     <section id="semester2">
     <div class="container">
     <a name="semester2"></a>
-    <h2>Semester2</h2>
+    <h2>Semester 2</h2>
     <ul class="classwork">
-        <li>A001</li>
-        <li>A002</li>
-        <li>A003</li>
-        <li>A004</li>
+        <li><a href="Projects/paintingappv3.html">Painting App</a></li>
     </ul>
     </div>
     <div id="musicdivider"></div>
