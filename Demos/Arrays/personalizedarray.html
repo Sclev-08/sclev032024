@@ -10,27 +10,27 @@
     <script>
         //  Cycle through array elements
 
-        let myCats;
-        myCats = []
+        let gameboyGames;
+        gameboyGames = []
         
         // Assign values to array
-        myCats[0] = "Fluffy" // index 0
-        myCats[1] = "Felix" // index 1
-        myCats[2] = "Garfield" // index 2
-        myCats[3] = "Heathcliff" // index 3
+        gameboyGames[0] = " Metroid II" // index 0
+        gameboyGames[1] = " Dr. Mario" // index 1
+        gameboyGames[2] = " DuckTales 2" // index 2
+        gameboyGames[3] = " Harvest Moon" // index 3
 
-myCats.forEach(function(cat){
-    console.log("I love " + cat)
-})
+        gameboyGames.push(" Final Fantasy Adventure");
+        gameboyGames.push(" Wario Land II");
+        gameboyGames.push(" Pokemon Yellow");
 
-myCats.forEach( function(c){
-    console.log("I miss " + c);
-})
+        gameboyGames.pop();
+        gameboyGames.shift();
 
-    /* myCats.forEach( function(cn, index){
-        window.alert(cn + " is index " + index)
-    } ); */
-
+        gameboyGames.forEach(function(game){
+            console.log(game +  " is the best Game Boy game.")
+        console.log(gameboyGames);})
+            window.document.write(gameboyGames)
+        console.log(gameboyGames);
     </script>
 </body>
 </html>
