@@ -34,14 +34,17 @@
     position: relative;
     border-radius: .5rem;
 }
+
 #pageheader{
-    min-height: 200px;
+    min-height: 250px;
     background-color: #8BC2F8;
     padding: 1rem;
     background-image: url(Images/grassdivider.gif);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
+    box-sizing: border-box;
+    border-bottom: #26488C 4px solid;
 }
 h2{
     font-family: var(--primary-font);
@@ -91,12 +94,12 @@ h2{
 }
 #pagenav{
     min-height: 40px;
-    width: 350px;
+    width: 300px;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: calc(50% - 175px);
+    left: calc(50% - 150px);
     bottom: 20px;
     justify-content: space-evenly;
     transition-property: color;
@@ -105,6 +108,7 @@ h2{
     background-color: #fffdf1;
     border-radius: 3rem;
     font-family: var(--primary-font);
+    font-size: 14px;
     box-shadow: inset #e0ddcc 0px 0px 5px 2px;
 }
 #media{
@@ -116,9 +120,6 @@ h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-color: #26488C;
-    border-style: solid;
-    border-width: 2px;
     box-shadow: 0px 0px 100px 50px inset #8BC2F8;
     position: relative;
 }
@@ -187,8 +188,9 @@ h2{
 #career{
     min-height: 200px;
     color: #bd446c;
-    background: rgb(232,147,171);
-    background: radial-gradient(circle, rgba(232,147,171,1) 0%, rgb(189, 68, 108) 100%);
+    background-image: url(Images/careerbg.png), radial-gradient(circle, rgba(232,147,171,1) 0%, rgb(189, 68, 108) 100%);
+    background-repeat: no-repeat;
+    background-position: bottom right;
     padding: 1rem;
     font-family: var(--text-font);
 }
@@ -209,8 +211,9 @@ h2{
 
 #pagecontent{
     min-height: 200px;
-    background: rgb(253,154,54);
-    background: radial-gradient(circle, rgba(253,154,54,1) 0%, rgba(239,102,30,1) 100%);
+    background-image: url(Images/mainbg.png), radial-gradient(circle, #fd9a36 0%, rgba(239,102,30,1) 100%);
+    background-repeat: no-repeat;
+    background-position: bottom left;
     color: #fff;
     text-shadow: 2px 1px 0px #f22b0d;
     padding: 1rem;
@@ -264,6 +267,9 @@ h2{
     font-family: var(--text-font);
     box-shadow: inset #e0ddcc 0px 0px 10px 5px;
 }
+/* #keywork .container{
+    background-color: rgba(0, 0, 0, 0.197);
+} */
 .footerlinks{
     display: none;
 }
@@ -275,16 +281,6 @@ font-weight: normal;
     text-align: center;
     list-style-type: none;
 }
-#fourgraphic{
-    position: absolute;
-    background-image: url(Images/fourgraphic.png);
-    width: 100px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: 20px;
-    top: 20px;
-}
 #pagefooter{
     min-height: 2rem;
     background: rgb(255,212,57);
@@ -295,12 +291,13 @@ font-weight: normal;
     font-family: var(--text-font);
 }
 #pagefooter .container{
-    min-height: 2rem;
+    min-height: 1rem;
 }
 #subfooter{
     min-height: 200px;
-    background: rgb(89,201,89);
-    background: radial-gradient(circle, rgba(89,201,89,1) 35%, rgba(11,159,15,1) 100%);
+    background-image: url(Images/subfooterbg.png), radial-gradient(circle, rgba(89,201,89,1) 35%, rgba(11,159,15,1) 100%);
+    background-repeat: no-repeat;
+    background-position: bottom left;
     color: #3d993d;
     padding: 1rem;
     text-align: center;
@@ -590,7 +587,7 @@ font-weight: normal;
         <blockquote id="mobilequote">"You should sing on and hope the notes will keep coming."</blockquote>
         <p id="mobilecredit">- Devi Mccallion</p>
         <p id="mediap"> click twice to play, click once to pause</p>
-        <audio id="angeloflove" src="Audio/angeloflovecalicrisis.mp3"></audio>
+        <audio id="instinctsshibayan" src="Audio/instinctsshibayan.mp3"></audio>
         <button id="musicplayer" ondblclick="playMusic()" onclick="pauseMusic()"></button>
         <div id="messagedisplay"></div>
         <div id="parcie"></div>
@@ -604,11 +601,11 @@ font-weight: normal;
     <a name="career"></a>
     <h2>Career</h2>
     <ul>
-            <li><a href="Career/Letter of Introduction.pdf">Letter of Introduction</a></li>
-            <li><a href="Career/Resume.pdf">Resume</a></li>
-            <li><a href="Career/References.pdf">References</a></li>
-            <li><a href="Career/Application.pdf">Job Application</a></li>
-            <li><a href="Career/Career Action Plan.pdf">Career Plan</a></li>
+            <li><a href="Career/Letter of Introduction.pdf" target="new">Letter of Introduction</a></li>
+            <li><a href="Career/Resume.pdf" target="new">Resume</a></li>
+            <li><a href="Career/References.pdf" target="new">References</a></li>
+            <li><a href="Career/Application.pdf" target="new">Job Application</a></li>
+            <li><a href="Career/Career Action Plan.pdf" target="new">Career Plan</a></li>
     </ul>
     <div id="catgraphic"></div>
     </div>
@@ -619,7 +616,7 @@ font-weight: normal;
     <main id="pagecontent">
     <div class="container">
         <h2>Welcome to my page!</h2>
-        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/MUpIXeZJyYo?si=tSOMijXxE7SJSVR-&t=4" >One Piece</a> and <a href="https://www.youtube.com/watch?v=Pe0NA10jk78" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them! <a href="Images/yay.png">Yay</a></p>
+        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/MUpIXeZJyYo?si=tSOMijXxE7SJSVR-&t=4" target="new" >One Piece</a> and <a href="https://www.youtube.com/watch?v=Pe0NA10jk78" target="new" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them! <a href="Images/yay.png" target="new" >Yay</a></p>
     </div>
     </main>
     <!-- end pagecontent -->
@@ -630,12 +627,11 @@ font-weight: normal;
     <a name="semester1"></a>
     <h2>Semester 1</h2>
     <ul class="classwork">
-        <li><a href="Activities/CanvasDrawing1/canvasdrawing1.html">Canvas Drawing</a></li>
-        <li><a href="Activities/CanvasDrawing2/canvasdrawing2.html">Canvas Drawing 2</a></li>
-        <li><a href="Activities/CustomObject/customobject.html">Custom Object</a></li>
+        <li><a href="Activities/CanvasDrawing1/canvasdrawing1.html" target="new">Canvas Drawing</a></li>
+        <li><a href="Activities/CanvasDrawing2/canvasdrawing2.html" target="new">Canvas Drawing 2</a></li>
+        <li><a href="Activities/CustomObject/customobject.html" target="new">Custom Object</a></li>
     </ul>
     </div>
-    <div id="fourgraphic"></div>
     </section>
     <!-- end semester1 -->
     
@@ -645,8 +641,8 @@ font-weight: normal;
     <a name="semester2"></a>
     <h2>Semester 2</h2>
     <ul class="classwork">
-        <li><a href="Demos/Arrays/personalizedarray.html">Personalized Array</a></li>
-        <li><a href="Projects/paintingappv5.html">Painting App</a></li>
+        <li><a href="Demos/Arrays/personalizedarray.html" target="new">Personalized Array</a></li>
+        <li><a href="Projects/paintingappv5.html" target="new">Painting App</a></li>
     </ul>
     </div>
     <div id="musicdivider"></div>
@@ -666,14 +662,13 @@ font-weight: normal;
     <!-- begin pagefooter -->
     <footer id="pagefooter">
     <div class="container">
-    <a href="chagoyan.com" target="new">chago</a> |
-    <a>color schemes</a> |
+    <a href="chagoyan.com" target="new">chaggy</a> |
     <a href="https://coalingahuron.aeries.net" target="new">aeries</a> |
     <a href="https://chs.chusd.org/" target="new" >chs</a> | 
-    <a>mycareertech</a> |
-    <a>classroom</a> |
-    <a>codepip</a> |
-    <a>minga</a>
+    <a href="https://mycareertech.com/" target="new" >mycareertech</a> |
+    <a href="https://classroom.google.com/h" target="new" >classroom</a> |
+    <a href="https://codepip.com" target="new" >codepip</a> |
+    <a href="https://minga.io" target="new" >minga</a>
     </div>
     </footer>
     <!-- end pagefooter -->
@@ -683,7 +678,7 @@ font-weight: normal;
     <div class="container">
 <div id="flexsubfooter">
             <div class="quote">
-                <h3>Final Thoughts</h3>
+                <h3>=`_´=</h3>
                 <blockquote>
                     "There is a child inside you <br> who's trying to raise a child inside me."
                 </blockquote>
@@ -711,11 +706,11 @@ font-weight: normal;
     <!-- begin script -->
     <script>
 
-            const audio = document.getElementById("angeloflove");
+            const audio = document.getElementById("instinctsshibayan");
 
             function playMusic(){
                     audio.play();
-                    window.alert("Now Playing: Angel of Love - Cali Crisis");
+                    window.alert("Now Playing:【東方】Instincts「ShibayanRecords」");
             }
             function pauseMusic(){
                     audio.pause();
@@ -759,8 +754,8 @@ font-weight: normal;
             messageText [12] = "<p>What's up?</p>";
             messageText [13] = "<p>𝓕𝓡𝓔𝓔 𝓥𝓑𝓤𝓒𝓚𝓢 𝔽ℝ𝔼𝔼 𝕍𝔹𝕌ℂ𝕂𝕊 you could get up to ₂₀₀,₀₀₀ 𝓋𝔟𝔲𝔠𝔨𝔰 FREE OF CHARGE if you follow 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙺</p>";
             messageText [14] = "<p>OKAY PULL UP GIRL</p>";
-            messageText [15] = "<a class='parcielink' target='_blank' href='https://www.youtube.com/watch?v=sr-_Pfw-Hnc'><p>Sigma boy</p></a>";
-            messageText [15] = "<a class='parcielink' target='_blank' href='https://youtu.be/B7zDTlQP1-o?si=ZN4UREZCtI6Y2uNJ&t=31'><p>Wanna see a squirrel dropkick a groundhog?</p></a>";
+            messageText [15] = "<a class='parcielink' target='new' href='https://www.youtube.com/watch?v=sr-_Pfw-Hnc'><p>Sigma boy</p></a>";
+            messageText [15] = "<a class='parcielink' target='new' href='https://youtu.be/B7zDTlQP1-o?si=ZN4UREZCtI6Y2uNJ&t=31'><p>Wanna see a squirrel dropkick a groundhog?</p></a>";
 
             //window.alert(messageText.length)
             let randomNum;
