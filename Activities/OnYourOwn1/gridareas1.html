@@ -5,42 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>On Your Own Grid Areas</title>
     <style>
+        body{
+            background-color: yellow;
+        }
         #container{
             background-color: purple;
+            padding: 1rem;
+            padding-top: 150px;
+            max-width: 1200px;
+            width: 80%;
+            margin: auto;
         }
         #wrapper{
-            background-color: none;
+            background-color: green;
+            width: 95%;
+            margin: auto;
         }
         #pageheader{
             background-color: orange;
+            min-height: 250px;
+            grid-area: hea;
         }
         #mainnav{
             background-color: aqua;
+            min-height: 150px;
+            grid-area: nav;
         }
         #intromedia{
             background-color: lime;
+            min-height: 400px;
+            grid-area: med;
         }
         #pagemain{
             background-color: white;
+            min-height:650px;
+            grid-area: mai;
         }
         #pageaside{
             background-color: teal;
+            min-height: 650px;
+            grid-area: asi;
         }
         #card001{
             background-color: coral;
+            min-height: 300px;
+            grid-area: car1;
         }
         #card002{
             background-color: lightblue;
+            min-height: 300px;
+            grid-area: car2;
         }
         #card003{
             background-color: lightgreen;
+            min-height: 300px;
+            grid-area: car3;
         }
         #pagefooter{
             background-color: gold;
+            min-height: 100px;
+            grid-area: foo;
         }
         #pagedetails{
             background-color: silver;
+            min-height: 400px;
+            grid-area: det;
         }
+
+        @media screen and (min-width:768px){
+                #container{
+                    display: grid;
+                    grid-template-areas:
+                    "hea hea hea"
+                    "nav nav nav"
+                    "med med med"
+                    "mai mai asi"
+                    "car1 car2 car3"
+                    "foo foo foo"
+                    "det det det";
+                }}
     </style>
 </head>
 <body>
