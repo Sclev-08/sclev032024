@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix - Pseudo Elements</title>
+    <style>
+        #myheader{
+            background-color: lightsalmon;
+            width: max-content;
+            position: relative;
+        }
+        #myheader::before{
+            content: "";
+            height: 4px;
+            width: 100%;
+            background-color: lightblue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #myheader::after{
+            content: "";
+            height: 4px;
+            width: 100%;
+            background-color:black;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        #headertwo{ 
+            width: max-content;
+        }
+        #headertwo::before{
+            content: "";
+            padding-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myheader">My Header One</h1>
+    <h2 id="headertwo">Header Two</h2>
+</body>
+</html>

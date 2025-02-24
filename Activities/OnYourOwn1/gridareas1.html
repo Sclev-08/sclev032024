@@ -3,102 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On Your Own Grid Areas</title>
-    <style>
-        body{
-            background-color: yellow;
-        }
-        #container{
-            background-color: purple;
-            padding: 1rem;
-            padding-top: 150px;
-            max-width: 1200px;
-            width: 80%;
-            margin: auto;
-        }
-        #wrapper{
-            background-color: green;
-            width: 95%;
-            margin: auto;
-        }
-        #pageheader{
-            background-color: orange;
-            min-height: 250px;
-            grid-area: hea;
-        }
-        #mainnav{
-            background-color: aqua;
-            min-height: 150px;
-            grid-area: nav;
-        }
-        #intromedia{
-            background-color: lime;
-            min-height: 400px;
-            grid-area: med;
-        }
-        #pagemain{
-            background-color: white;
-            min-height:650px;
-            grid-area: mai;
-        }
-        #pageaside{
-            background-color: teal;
-            min-height: 650px;
-            grid-area: asi;
-        }
-        #card001{
-            background-color: coral;
-            min-height: 300px;
-            grid-area: car1;
-        }
-        #card002{
-            background-color: lightblue;
-            min-height: 300px;
-            grid-area: car2;
-        }
-        #card003{
-            background-color: lightgreen;
-            min-height: 300px;
-            grid-area: car3;
-        }
-        #pagefooter{
-            background-color: gold;
-            min-height: 100px;
-            grid-area: foo;
-        }
-        #pagedetails{
-            background-color: silver;
-            min-height: 400px;
-            grid-area: det;
-        }
+    <title>On Your Own Grid Areas 1</title>
+        <style>
+            body{
+                background-color: #ffec80;
+            }
+            #container{
+                background-color: #995b9a;
+                padding: 1rem;
+                padding-top: 150px;
+                max-width: 1200px;
+                width: 80%;
+                margin: auto;
+            }
+            #wrapper{
+                width: 90%;
+                margin: auto;
+                gap: 10px;
+                box-sizing: border-box;
+            }
+            #pageheader{
+                background-color: #f8873b;
+                min-height: 200px;
+                grid-area: hea;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #a84300;
+            }
+            #mainnav{
+                background-color: #b1f2f2;
+                min-height: 150px;
+                grid-area: nav;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #4fbdbd;
+            }
+            #intromedia{
+                background-color: #a5ea83;
+                min-height: 350px;
+                grid-area: med;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #669a36;
+            }
+            #pagemain{
+                background-color: white;
+                min-height:300px;
+                grid-area: mai;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #888888;
+            }
+            #pageaside{
+                background-color: #7aaeae;
+                min-height:300px;
+                grid-area: asi;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #b8dada;
+            }
+            #card001{
+                background-color: #fdae92;
+                min-height: 200px;
+                grid-area: car1;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #cb6d4b;
+            }
+            #card002{
+                background-color: #d7f5ff;
+                min-height: 200px;
+                grid-area: car2;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #6b9eaf;
+            }
+            #card003{
+                background-color: #dcffcb;
+                min-height: 200px;
+                grid-area: car3;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #a5cf91;
+            }
+            #pagefooter{
+                background-color: #e0a21c;
+                min-height: 100px;
+                grid-area: foo;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #9a530b;
+            }
+            #pagedetails{
+                background-color: #ccd1d5;
+                min-height: 400px;
+                grid-area: det;
+                padding: 1rem;
+                box-sizing: border-box;
+                color: #52616c;
+            }
 
-        @media screen and (min-width:768px){
-                #container{
-                    display: grid;
-                    grid-template-areas:
-                    "hea hea hea"
-                    "nav nav nav"
-                    "med med med"
-                    "mai mai asi"
-                    "car1 car2 car3"
-                    "foo foo foo"
-                    "det det det";
-                }}
-    </style>
+            @media screen and (min-width:768px){
+                    #wrapper{
+                        display: grid;
+                        grid-template-areas:
+                        "hea hea hea"
+                        "nav nav nav"
+                        "med med med"
+                        "mai mai asi"
+                        "mai mai asi"
+                        "car1 car2 car3"
+                        "foo foo foo"
+                        "det det det";
+                    }}
+            </style>
 </head>
 <body>
     <div id="container">
         <div id="wrapper">
-            <header id="pageheader"></header>
-            <nav id="mainnav"></nav>
-            <div id="intromedia"></div>
-            <main id="pagemain"></main>
-            <aside id="pageaside"></aside>
-            <section id="card001"></section>
-            <section id="card002"></section>
-            <section id="card003"></section>
-            <footer id="pagefooter"></footer>
-            <footer id="pagedetails"></footer>
+            <header id="pageheader">#pageheader</header>
+            <nav id="mainnav">#mainnav</nav>
+            <div id="intromedia">#intromedia</div>
+            <main id="pagemain">#pagemain</main>
+            <aside id="pageaside">#pageaside</aside>
+            <section id="card001">#card001</section>
+            <section id="card002">#card002</section>
+            <section id="card003">#card003</section>
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="pagedetails">#pagedetails</footer>
         </div>
     </div>
 </body>

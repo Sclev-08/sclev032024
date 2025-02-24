@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Your Own Grid Areas 2</title>
+    <style>
+        body{
+            background-color: #ffec80;
+        }
+        #container{
+            background-color: #995b9a;
+            padding: 1rem;
+            padding-top: 150px;
+            max-width: 1200px;
+            width: 80%;
+            margin: auto;
+        }
+        #wrapper{
+            width: 90%;
+            margin: auto;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+        #pageheader{
+            background-color: #f8873b;
+            min-height: 200px;
+            grid-area: hea;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #a84300;
+        }
+        #mainnav{
+            background-color: #b1f2f2;
+            min-height: 150px;
+            grid-area: nav;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #4fbdbd;
+        }
+        #intromedia{
+            background-color: #a5ea83;
+            min-height: 350px;
+            grid-area: med;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #669a36;
+        }
+        #pagemain{
+            background-color: white;
+            min-height:300px;
+            grid-area: mai;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #888888;
+        }
+        #card001{
+            background-color: #fdae92;
+            min-height: 200px;
+            grid-area: car1;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #cb6d4b;
+        }
+        #card002{
+            background-color: #d7f5ff;
+            min-height: 200px;
+            grid-area: car2;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #6b9eaf;
+        }
+        #pagefooter{
+            background-color: #e0a21c;
+            min-height: 100px;
+            grid-area: foo;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #9a530b;
+        }
+        #pagedetails{
+            background-color: #ccd1d5;
+            min-height: 400px;
+            grid-area: det;
+            padding: 1rem;
+            box-sizing: border-box;
+            color: #52616c;
+        }
+
+        @media screen and (min-width:768px){
+                #wrapper{
+                    display: grid;
+                    grid-template-areas:
+                    "hea hea hea"
+                    "med med med"
+                    "nav mai mai"
+                    "nav mai mai"
+                    "nav car1 car2"
+                    "foo foo foo"
+                    "det det det";
+                }}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">#pageheader</header>
+            <nav id="mainnav">#mainnav</nav>
+            <div id="intromedia">#intromedia</div>
+            <main id="pagemain">#pagemain</main>
+            <section id="card001">#card001</section>
+            <section id="card002">#card002</section>
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="pagedetails">#pagedetails</footer>
+        </div>
+    </div>
+</body>
+</html>
