@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    #pageheader{
+        width: 100%;
+        min-height: 100px;
+        background-image: url(Images/plaidtile.png);
+        background-position: center center;
+        position: relative;
+    }
+    #pageheader::before{
+        content: "";
+        height: 100%;
+        width: 10rem;
+        background-image: url(Images/petmanialogo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+    }
+    #wrapper{
+        margin: auto;
+        margin-top: 10px;
+        height:700px;
+        background-color: none;
+        }
+    #mainmedia{
+        width: 100%;
+        min-height: 200px;
+        background-image: url(Images/tortoiseHolding.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        box-shadow: inset 0px 0px 40px 10px white;
+        grid-area: med;
+        border-radius: 1rem 1rem 0rem 0rem;
+    }
+    #pagenav{
+        width: 100%;
+        height: 200px;
+        background-color: #FFDA87;
+        grid-area: nav;
+    }
+    #pagemain{
+        width: 100%;
+        height: 300px;
+        padding: 1rem;
+        background-color: #fff;
+        box-sizing: border-box;
+        grid-area: mai;
+    }
+    #pagedetails{
+        width: 100%;
+        height: 200px;
+        background-color: #EA7418;
+        grid-area: det;
+        background-image: url(Images/clownfish.png);
+        background-repeat: no-repeat;
+        background-position-x: -50px;
+        background-position-y: 160%;
+        background-size: 150px;
+    }
+    #contact{
+        width: 100%;
+        height: 100px;
+        background-color: #B8EEF6;
+        grid-area: con;
+        border-radius: 0rem 0rem 1rem 1rem;
+    }
+
+    @media screen and (min-width:768px){
+        #wrapper{
+        width: 98%;
+        display: grid;
+        grid-template-areas:
+        "med med med med med"
+        "nav mai mai mai mai"
+        "det mai mai mai mai"
+        "con con con con con"
+        }
+        #pagemain{
+            height: 400px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header id="pageheader"></header>
+<div id="wrapper">
+    <div id="mainmedia"></div>
+    <nav id="pagenav"></nav>
+    <div id="pagedetails"></div>
+        <main id="pagemain">
+            <h1>Find Your Forever Friend</h1>
+            <p>stuff</p>
+        </main>
+    <footer id="contact"></footer>
+</div>
+</body>
+</html>
