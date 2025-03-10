@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Central Valley Pet Adoption</title>
     <style>
     *{
         padding: 0;
         margin: 0;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    body{
+        background-color:#75acb6;
     }
     #pageheader{
         width: 100%;
@@ -28,10 +32,9 @@
     }
     #wrapper{
         margin: auto;
-        margin-top: 10px;
-        height:700px;
+        min-height:650px;
         background-color: none;
-        }
+    }
     #mainmedia{
         width: 100%;
         min-height: 200px;
@@ -41,53 +44,95 @@
         background-position: top center;
         box-shadow: inset 0px 0px 40px 10px white;
         grid-area: med;
-        border-radius: 1rem 1rem 0rem 0rem;
     }
     #pagenav{
-        width: 100%;
-        height: 200px;
+        max-width: 100%;
+        min-height: 100px;
         background-color: #FFDA87;
         grid-area: nav;
+        text-align: center;
+        padding: 1rem;
+        background-image: url(Images/clownfish.png);
+        background-repeat: no-repeat;
+        background-position-x: -40px;
+        background-position-y: 5.5rem;
+        background-size: 120px;
+    }
+    #pagenav ul{
+        list-style-type: none;
+        font-size: larger;
+        padding-top: 5px;
+    }
+    #pagenav a{
+        text-decoration: none;
+        color: #EA7418;
+    }
+    #pagenav a:hover{
+        text-decoration: underline;
+        color: #b27b5a;
     }
     #pagemain{
-        width: 100%;
-        height: 300px;
-        padding: 1rem;
-        background-color: #fff;
+        max-width: 100%;
+        min-height: 400px;
+        padding: 2rem;
+        background-color: #fafeff;
+        color: #5f4433;
         box-sizing: border-box;
         grid-area: mai;
     }
-    #pagedetails{
-        width: 100%;
-        height: 200px;
-        background-color: #EA7418;
-        grid-area: det;
-        background-image: url(Images/clownfish.png);
-        background-repeat: no-repeat;
-        background-position-x: -50px;
-        background-position-y: 160%;
-        background-size: 150px;
+    #pagemain p{
+        padding-top: 10px;
     }
+    img.centerimage{
+            max-width: 50%;
+            display: block;
+            margin: auto;
+        }
     #contact{
         width: 100%;
-        height: 100px;
+        min-height: 50px;
         background-color: #B8EEF6;
         grid-area: con;
-        border-radius: 0rem 0rem 1rem 1rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: #b27b5a;
     }
 
     @media screen and (min-width:768px){
         #wrapper{
-        width: 98%;
+        width: 90%;
+        max-width: 1200px;
+        margin-top: 10px;
+        min-height: 750px;
         display: grid;
         grid-template-areas:
         "med med med med med"
-        "nav mai mai mai mai"
-        "det mai mai mai mai"
-        "con con con con con"
+        "nav nav mai mai mai"
+        "nav nav mai mai mai"
+        "con con con con con";
+        box-shadow: #608f97 0px 0px 6px 1px;
+        border-radius: 1rem 1rem 1rem 1rem;
+        }
+        #mainmedia{
+            border-radius: 1rem 1rem 0rem 0rem;
         }
         #pagemain{
-            height: 400px;
+            min-height: 500px;
+        }
+        #pagenav{
+            min-height: 300px;
+            background-position-x: -50px;
+            background-position-y: 450px;
+            background-size: 150px;
+        }
+        #pagenav ul{
+            margin: auto;
+            padding-top: 200px;
+            width: max-content;
+        }
+        #contact{
+            border-radius: 0rem 0rem 1rem 1rem;
         }
     }
     </style>
@@ -96,13 +141,24 @@
     <header id="pageheader"></header>
 <div id="wrapper">
     <div id="mainmedia"></div>
-    <nav id="pagenav"></nav>
-    <div id="pagedetails"></div>
-        <main id="pagemain">
-            <h1>Find Your Forever Friend</h1>
-            <p>stuff</p>
-        </main>
-    <footer id="contact"></footer>
+    <nav id="pagenav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="whyadopt.html">Why Adopt</a></li>
+            <li><a href="ouranimals.html">Our Animals</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+    </nav>
+    <main id="pagemain">
+        <h1>Find Your Forever Friend</h1>
+        <br>
+        <p>Here at Central Valley Pet Adoption, we believe pets can come in any size. We are a welcoming shelter dedicated to finding loving homes for both traditional and exotic pets. Located in the heart of the community, our center offers a safe haven for a wide variety of animals, from playful dogs and cats to fascinating birds and snakes. With a team of passionate staff and volunteers, Central Valley Pet Adoption provides exceptional care for every animal, ensuring they are healthy, socialized, and ready for their new families. We pride ourselves on offering a diverse selection of pets, catering to families and individuals looking for a traditional companion or those seeking something a bit more unique. Whether you're looking for a cuddly kitten, a loyal dog, or an exotic bird to add to your home, Central Valley Pet Adoption is the place to visit, where every pet deserves a second chance at a loving life.</p>
+    </main>
+    <footer id="contact">
+        <p>cvpetadoption@gmail.com</p>
+        <p>123 Washington BLVD, Fresno CA</p>
+        <p>© Central Valley Pet Adoption 2025</p>
+    </footer>
 </div>
 </body>
 </html>
