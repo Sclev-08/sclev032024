@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(MORRIGAN/ezgif-4-a0bd660514.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: "VT323", monospace;
+        }
+        .container{
+            height: auto;
+            width: 1150px;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            position: relative;
+            grid-template-areas:
+            "one two three four four"
+            "one five six six seven"
+            "one eight eight eight nine"
+            "one eight eight eight nine"
+            "ten ten ten ten ten";
+        }
+        p{
+            margin: 0;
+        }
+        #one{
+            width: 150px;
+            background-image: url(MORRIGAN/morrigan-med-anim1.gif), linear-gradient(180deg, #671e54 0%, #101020 100%);
+            background-position-x: -10px, center;
+            background-position-y: 390px, 0px;
+            background-repeat: no-repeat, repeat;
+            background-size: 100%, cover;
+            border: 2px #800080 solid;
+            box-sizing: border-box;
+            grid-area: one;
+        }
+        #two{
+            width: 200px;
+            height: 40px;
+            background-image: url(MORRIGAN/morrigan-xb.gif), linear-gradient(180deg, rgba(128,0,128,1) 0%, rgba(224,128,144,1) 100%);
+            background-repeat: no-repeat, repeat;
+            background-size: 70%, cover;
+            background-position-y:-50px, 0;
+            border: 2px #800080 solid;
+            border-right: none;
+            box-sizing: border-box;
+            grid-area: two;
+        }
+        #three{
+            width: 300px;
+            height: 40px;
+            background-image: linear-gradient(180deg, rgba(128,0,128,1) 0%, rgba(224,128,144,1) 100%);
+            border: 2px #800080 solid;
+            border-left: none;
+            border-right: none;
+            box-sizing: border-box;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 0rem;
+            padding-top: .5rem;
+            text-align: center;
+            grid-area: three;
+        }
+        #four{
+            width: 500px;
+            height: 40px;
+            background-image: linear-gradient(180deg, rgba(128,0,128,1) 0%, rgba(224,128,144,1) 100%);
+            border: 2px #800080 solid;
+            border-left: none;
+            box-sizing: border-box;
+            color: #f0f0f0;
+            padding: 0rem;
+            padding-top: .25rem;
+            padding-right: 1rem;
+            text-align: right;
+            grid-area: four;
+        }
+        #five{
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            color: #2fa070;
+            box-sizing: border-box;
+            padding: 1rem;
+            grid-area: five;
+        }
+        #six{
+            width: 400px;
+            height: 100px;
+            background-color: #3e3e3e;
+            grid-area: six;
+        }
+        #seven{
+            width: 400px;
+            height: 100px;
+            background-color:#929292;
+            background-image: url(MORRIGAN/morrigan66.gif);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            grid-area: seven;
+        }
+        #eight{
+            width: 600px;
+            height: 400px;
+            background-color:#1b1b1b;
+            grid-area: eight;
+        }
+        #nine{
+            width: 400px;
+            height: 400px;
+            background-color:#b8b8b8;
+            grid-area: nine;
+        }
+        #ten{
+            width: 100%;
+            height: 100px;
+            background-color:#dddddd;
+            grid-area: ten;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"><p>"My victories, like my beauty, are eternal!"</p></div>
+        <div id="four"><p>𓆩♡𓆪</p></div>
+        <div id="five">five</div>
+        <div id="six">six</div>
+        <div id="seven">seven</div>
+        <div id="eight">eight</div>
+        <div id="nine">nine</div>
+        <div id="ten">ten</div>
+        <div id="pagedoll"></div>
+    </div>
+</body>
+</html>

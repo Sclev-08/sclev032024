@@ -4,557 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Scout Cleveland's Page </title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sofadi+One&display=swapfamily=Jersey+10&display=swap" rel="stylesheet">
     <style>
     
-    html {
-    scroll-behavior: smooth;
-    cursor: url(Images/butterflycursor.gif), auto;
-    }
-    a{
-        cursor: url(Images/butterflyclick.gif), auto;
-    }
-    
-    *{padding: 0;}
-    :root{
-        --primary-font: "Sofadi One", system-ui;
-        --text-font:"Handjet", system-ui;
-    }
-    body{
-        background-color: #26488C;
-    }
-.container{
-    background-color: rgba(255, 255, 255, 0.341);
-    min-height: 10rem;
-    max-width: 75rem;
-    margin: auto;
-    padding:  1rem;
-    position: relative;
-    border-radius: .5rem;
-}
-
-#pageheader{
-    min-height: 250px;
-    background-color: #8BC2F8;
-    padding: 1rem;
-    background-image: url(Images/grassdivider.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    box-sizing: border-box;
-    border-bottom: #26488C 4px solid;
-}
-h2{
-    font-family: var(--primary-font);
-    font-weight: normal;
-}
-#tommytheturkey{
-    font-family: var(--primary-font);
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-bottom: 0;
-    margin-top: -30px;
-    opacity: 0;
-    transition: 3s;
-}
-#tommytheturkey:hover{
-    opacity: 1;
-}
-#pagequote{
-    display: block;
-    opacity: 0;
-    margin: auto;
-    text-align: center;
-    margin-top: 30px;
-}
-#quotetext{
-    font-size: x-large;
-    color:#26488C;
-    font-family: var(--text-font);
-}
-#quotecredit{
-    font-size: medium;
-    font-family: var(--primary-font);
-    color: #fffdf1;
-}
-#pageheader .container{
-    border-radius: 2rem;
-}
-#logo{
-    background-image: url(Images/logo.png);
-    height: 100px;
-    width: 100px;
-    background-size: contain;
-    position: absolute;
-    top: 20px;
-    left: calc(50% - 50px);
-}
-#pagenav{
-    min-height: 40px;
-    width: 300px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: calc(50% - 150px);
-    bottom: 20px;
-    justify-content: space-evenly;
-    transition-property: color;
-    transition-duration: 1s;
-    color: #39a639;
-    background-color: #fffdf1;
-    border-radius: 3rem;
-    font-family: var(--primary-font);
-    font-size: 14px;
-    box-shadow: inset #e0ddcc 0px 0px 5px 2px;
-}
-#media{
-    min-height: 200px;
-    background-color: #8BC2F8;
-    color: #26488C;
-    padding: 1rem;
-    background-image: url(Images/mediabg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0px 0px 100px 50px inset #8BC2F8;
-    position: relative;
-}
-#musicplayer{
-    background: none;
-    border: none;
-    padding: 0;
-    height: 100px;
-    width: 100px;
-    background-image: url(Images/musicplayergraphic.png);
-    background-repeat: no-repeat;
-    background-size:contain;
-    position: absolute;
-    left: auto;
-    top: auto;
-    right: -10px;
-    bottom: -5px;
-    opacity: 0;
-}
-#mediap{
-    position: absolute;
-    left: auto;
-    top: auto;
-    right: 90px;
-    bottom: -5px;
-    font-family: var(--text-font);
-    opacity: 0;
-}
-#media h1{
-    text-align: center;
-    font-size: 3rem;
-    font-weight:normal;
-    font-family: var(--primary-font);
-    letter-spacing: .25rem;
-    margin-bottom: 0px;
-    margin-top: 10%;
-    color: #26488C;
-    text-shadow: 2px 2px 10px #8BC2F8;
-}
-#media h2{
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0px;
-    color: #26488C;
-    text-shadow: 2px 2px 10px #8BC2F8;
-}
-#mobilequote{
-    opacity: 1;
-    max-width: 100%;
-    font-family: var(--text-font);
-    text-align: center;
-    margin-bottom: 0px;
-    font-size: larger;
-    color: #4575d9;
-}
-#mobilecredit{
-    opacity: 1;
-    max-width: 100%;
-    font-family: var(--primary-font);
-    text-align: center;
-    margin-top: 0px;
-    font-size: medium;
-    color: #4575d9;
-}
-
-#career{
-    min-height: 200px;
-    color: #bd446c;
-    background-image: url(Images/careerbg.png), radial-gradient(circle, rgba(232,147,171,1) 0%, rgb(189, 68, 108) 100%);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    padding: 1rem;
-    font-family: var(--text-font);
-}
-#career .container{
-    position: relative;
-}
-#career>ul, li{
-    list-style-type: none;
-    text-align: center;
-}
-#career .container a{
-    color: #bd446c;
-    transition: .5s;
-}
-#career .container a:hover{
-    color: #ec83a6;
-}
-
-#pagecontent{
-    min-height: 200px;
-    background-image: url(Images/mainbg.png), radial-gradient(circle, #fd9a36 0%, rgba(239,102,30,1) 100%);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    color: #fff;
-    text-shadow: 2px 1px 0px #f22b0d;
-    padding: 1rem;
-    font-family: var(--text-font);
-}
-#pagecontent h2{
-    font-family: var(--text-font);
-    letter-spacing: 1px;
-}
-#pagecontent .container{
-    background-image: url(Images/kazooie.gif);
-    background-repeat: no-repeat;
-    background-size: 50px;
-    background-position-x: 210px;
-    background-position-y: 25px;
-}
-#pagecontent a, u{
-    text-decoration: none;
-    color: white;
-}
-#introduction{
-    font-size: 100%;
-    letter-spacing: .5px;
-    line-height: 1.7;
-    font-family: var(--primary-font);
-}
-#semester1{
-    min-height: 200px;
-    background: rgb(155,227,251);
-    background: linear-gradient(180deg, rgba(155,227,251,1) 0%, rgba(113,158,247,1) 100%);
-    color: #5f88d9;
-    padding: 1rem;
-    position: relative;
-    font-family: var(--primary-font);
-}
-#semester2{
-    min-height: 200px;
-    background: rgb(155,227,251);
-    background: linear-gradient(0deg, rgba(155,227,251,1) 0%, rgba(113,158,247,1) 100%);
-    color: #5f88d9;
-    padding: 1rem;
-    position: relative;
-    font-family: var(--primary-font);
-}
-#keywork{
-    min-height: 200px;
-    background: rgb(255, 255, 255);
-    background: radial-gradient(circle, rgb(224, 221, 204) 0%, rgb(255, 253, 241) 100%);
-    color: #39a639;
-    padding: 1rem;
-    font-family: var(--text-font);
-    box-shadow: inset #e0ddcc 0px 0px 10px 5px;
-}
-/* #keywork .container{
-    background-color: rgba(0, 0, 0, 0.197);
-} */
-.footerlinks{
-    display: none;
-}
-#flexsubfooter h3{
-letter-spacing: 1px;
-font-weight: normal;
-}
-.classwork{
-    text-align: center;
-    list-style-type: none;
-}
-#pagefooter{
-    min-height: 2rem;
-    background: rgb(255,212,57);
-    background: radial-gradient(circle, rgba(255,212,57,1) 0%, rgba(223,163,55,1) 100%);
-    padding: 1rem;
-    text-align: center;
-    color: #dfa337;
-    font-family: var(--text-font);
-}
-#pagefooter .container{
-    min-height: 1rem;
-}
-#subfooter{
-    min-height: 200px;
-    background-image: url(Images/subfooterbg.png), radial-gradient(circle, rgba(89,201,89,1) 35%, rgba(11,159,15,1) 100%);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    color: #3d993d;
-    padding: 1rem;
-    text-align: center;
-    font-family: var(--text-font);
-}
-#subfooter .container{
-    position: relative;
-}
-
-#top{
-    width: 80px;
-    height: 70px;
-    position: absolute;
-    position: fixed;
-    right: 15px;
-    bottom: 10px;
-    padding: .25rem;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.763);
-    box-shadow: rgba(255, 255, 255, 0.763) 0px 0px 10px 2px;
-    background-image: url(Images/freyafang.png);
-    background-repeat: no-repeat;
-    background-size: 70px;
-    background-position-x:center;
-    background-position-y: bottom;
-    font-family: var(--text-font);
-    text-align: center;
-    border-radius: 10px;
-    opacity: 50%;
-    transition: all .5s;
-}
-#top>a, u{
-    color: #25a8dc;
-    text-decoration:none;
-}
-#top:hover{
-    opacity: 100%;
-}
-
-/* begin graphics */
-#catgraphic{
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    background-image: url(Images/catgraphic.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    bottom: -20px;
-    left: -20px;
-    rotate: -10deg;
-    transform: scaleX(-1);
-}
-#musicdivider{
-    position: absolute;
-    background-image: url(Images/musicdivider.gif);
-    background-size: contain;
-    background-repeat:repeat-x;
-    background-position: center;
-    top: -20px;
-    left: calc(50% - 150px);
-    filter: saturate(200%);
-    min-width: 300px;
-    min-height: 30px;
-}
-#b-k{
-    height: 100px;
-    width: 160px;
-    background-image: url(Images/kazooieattack.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    position: absolute;
-    left: -15px;
-    bottom: -25px;
-}
-
-/* end graphics */
-
-/* begin link colors */
-#pagenav>a{
-    color: #59ca59;
-    transition: .5s;
-    text-decoration: none;
-}
-#pagenav>a:hover{
-    color: #4575d9;
-}
-#pagefooter .container>a{
-    color: #dfa337;
-    transition: .5s;
-}
-#pagefooter .container>a:hover{
-    color: #ef661e;
-}
-#semester1, a{
-    color: white;
-    transition: .5s;
-    text-decoration: none;
-}
-#semester1, a:hover{
-    color: palegreen;
-}
-#semester1, a:visited{
-    color: #5f88d9;
-}
-#semester1 a:visited:hover{
-    color: white;
-}
-#semester2, a{
-    color: white;
-    transition: .5s;
-    text-decoration: none;
-}
-#semester2, a:hover{
-    color: palegreen;
-}
-#semester2, a:visited{
-    color: #5f88d9;
-}
-#semester2 a:visited:hover{
-    color: white;
-}
-.semester a:visited:hover{
-    color: white;
-}
-.parcielink{
-    color: #4575d9;
-}
-.parcielink:hover{
-    color: #4575d9;
-}
-.parcielink:visited{
-    color: #4575d9;
-}
-/* end link colors */
-        /* Parcie doll */
-        #parcie{
-            position: absolute;
-            height: 200px;
-            width: 100px;
-            background-image: url(Images/parcie.png);
-            background-size: contain;
-            bottom: 0px;
-            left: 70px;
-            filter: brightness(110%);
-            display: none;
-            opacity: 0;
-        }
-        #messagedisplay{
-            position: absolute;
-            min-height: 50px;
-            width: 200px;
-            border: 2px solid #26488C;
-            padding: 5px;
-            box-sizing: border-box;
-            background-color: #fffdf1;
-            font-family:var(--primary-font);
-            font-size: large;
-            letter-spacing: 3px;
-            bottom: 230px;
-            left: 20px;
-            opacity: 0;
-            transition: .5s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .shake{
-            animation-name: shake;
-            animation-duration: .5s;
-            animation-iteration-count: 1;
-            animation-timing-function:ease-in-out;
-        }
-        @keyframes shake{
-
-            0%{bottom: 0px;}
-            20%{bottom: 10px;}
-            100%{bottom: 0px;}
-
-        }
-
-        .appear{
-            animation-name: appear;
-            animation-duration: .5s;
-            animation-iteration-count: 1;
-            animation-timing-function:ease-in-out;
-        }
-        @keyframes appear{
-
-            0%{bottom: 220px;}
-            100%{bottom: 230px;}
-        }
-        /* End Parcie doll */
-        /* Media queries */
-        @media screen and (min-width: 768px){
-            .footerlinks{
-                display: block;
-                min-width: 200px;
-            }
-            #flexsubfooter{
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-
-        @media screen and (min-width: 1024px){
-            #logo{
-                left:0px;
-                top: 0px;
-                scale: 90%;
-            }
-            #media{
-                height: 450px;
-            }
-            #pageheader .container{
-                min-height: 1rem;
-            }
-            #pagenav{
-                top: 10px;
-                right: 10px;
-                left: auto;
-                bottom: auto;
-                font-size: 90%;
-                flex-direction: column;
-                width: 90px;
-                height: 100px;
-                border-radius: 1rem;
-            }
-            #pagequote{
-                opacity: 1;
-                transition: 1s;
-                transition-delay: 200ms;
-            }
-            #musicdivider{
-                min-width: 600px;
-                min-height: 30px;
-                left: calc(50% - 300px);
-            }
-            #introduction{
-                font-size: 100%;
-            }
-            #musicplayer, #mediap{
-                opacity: 1;
-                transition: 1s;
-                transition-delay: 300ms;
-            }
-            #mobilequote, #mobilecredit{
-                opacity: 0;
-            }
-            #parcie{
-                display: block;
-                opacity: 1;
-            }
-        }
-        /* End media queries */
     </style>
 </head>
 <body>
@@ -566,14 +21,12 @@ font-weight: normal;
     <div class="container">
     <a href="https://scoutclev.netlify.app/"><div id="logo"></div></a>
     <nav id="pagenav">
-    <a href="#career">Career</a>
-    <a href="#semester1">Semester 1</a>
-    <a href="#semester2">Semester 2</a>
-    <a href="#keyassignments">Key Work</a>
+    <a href="worksamples.html">Work Samples</a>
+    <a href="certificates.html">Certificates</a>
     </nav>
     <div id="pagequote">
         <quote id="quotetext">"You should sing on and hope the notes will keep coming."</quote>
-        <p id="quotecredit">- Devi Mccallion</p>
+        <p id="quotecredit">- Devi McCallion</p>
     </div>
     </div>
     </header>
@@ -594,7 +47,17 @@ font-weight: normal;
         <audio id="sfx" src="Audio/starling.mp3"></audio>
     </section>
     <!-- end media -->
-    
+        <!-- begin topnav -->
+        <nav id="topnav">
+            <div class="container">
+            <a href="#career">Career</a> |
+            <a href="#semester1">Semester 1</a> |
+            <a href="#semester2">Semester 2</a> |
+            <a href="#keyassignments">Key Assignments
+            </a>
+            </div>
+            </nav>
+            <!-- end topnav -->
     <!-- begin career -->
     <section id="career">
     <div class="container">
@@ -604,7 +67,7 @@ font-weight: normal;
             <li><a href="Career/Letter of Introduction.pdf" target="new">Letter of Introduction</a></li>
             <li><a href="Career/Resume.pdf" target="new">Resume</a></li>
             <li><a href="Career/References.pdf" target="new">References</a></li>
-            <li><a href="Career/Application.pdf" target="new">Job Application</a></li>
+            <li><a href="Career/Job Application.pdf" target="new">Job Application</a></li>
             <li><a href="Career/Career Action Plan.pdf" target="new">Career Plan</a></li>
     </ul>
     <div id="catgraphic"></div>
@@ -616,7 +79,7 @@ font-weight: normal;
     <main id="pagecontent">
     <div class="container">
         <h2>Welcome to my page!</h2>
-        <p id="introduction">My name is Scout Cleveland. I'm 16 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/MUpIXeZJyYo?si=tSOMijXxE7SJSVR-&t=4" target="new" >One Piece</a> and <a href="https://www.youtube.com/watch?v=Pe0NA10jk78" target="new" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them! <a href="Images/yay.png" target="new" >Yay</a></p>
+        <p id="introduction">My name is Scout Cleveland. I'm 17 years old and a junior. My interests include coding,  art, media archival, writing, and collecting. I also like <a href="https://youtu.be/MUpIXeZJyYo?si=tSOMijXxE7SJSVR-&t=4" target="new" >One Piece</a> and <a href="https://www.youtube.com/watch?v=Pe0NA10jk78" target="new" >Touhou Project</a> a lot. I want to pursue a career in web development! This year, because it's the last one I'll make for this class, my portfolio is very decorated. There are a handful of secrets and a lot of details so I hope you have fun finding them! <a href="Images/yay.png" target="new" >Yay</a></p>
     </div>
     </main>
     <!-- end pagecontent -->
@@ -642,7 +105,6 @@ font-weight: normal;
     <h2>Semester 2</h2>
     <ul class="classwork">
         <li><a href="Demos/Arrays/personalizedarray.html" target="new">Personalized Array</a></li>
-        <li><a href="Projects/paintingappv5.html" target="new">Painting App</a></li>
         <li><a href="CareerSkillsChallenges/1969/index.html" target="new">Grid areas</a></li>
         <li><a href="Activities/OnYourOwn1/gridareas1.html" target="new">On your Own</a></li>
         <li><a href="Activities/OnYourOwn2/gridareas2.html" target="new">On your Own 2</a></li>
@@ -659,7 +121,7 @@ font-weight: normal;
             <div class="container">
                 <a name="keywork"></a>
                 <h2>Key work</h2>
-                <p id="key">key work</p>
+                <li><a href="Projects/paintingappv5.html" target="new">Painting App</a></li>
             </div>
             </div>
             <!-- end keywork -->
@@ -667,13 +129,11 @@ font-weight: normal;
     <!-- begin pagefooter -->
     <footer id="pagefooter">
     <div class="container">
-    <a href="chagoyan.com" target="new">chaggy</a> |
-    <a href="https://coalingahuron.aeries.net" target="new">aeries</a> |
-    <a href="https://chs.chusd.org/" target="new" >chs</a> | 
-    <a href="https://mycareertech.com/" target="new" >mycareertech</a> |
-    <a href="https://classroom.google.com/h" target="new" >classroom</a> |
-    <a href="https://codepip.com" target="new" >codepip</a> |
-    <a href="https://minga.io" target="new" >minga</a>
+    <a href="https://coalingahuron.aeries.net" target="new">Aeries</a> |
+    <a href="https://chs.chusd.org/" target="new" >CHS</a> | 
+    <a href="https://classroom.google.com/h" target="new" >Classroom</a> |
+    <a href="https://codepip.com" target="new" >CodePip</a> |
+    <a href="https://minga.io" target="new" >Minga</a>
     </div>
     </footer>
     <!-- end pagefooter -->
@@ -692,10 +152,9 @@ font-weight: normal;
             <div class="footerlinks">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="#career">Career</a></li>
-                    <li><a href="#semester1">Semester 1</a></li>
-                    <li><a href="#semester2">Semester 2</a></li>
-                    <li><a href="#keyassignments">Key Work</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="worksamples.html">Work Samples</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                 </ul>
             </div>
 </div>
@@ -738,7 +197,7 @@ font-weight: normal;
             doll.classList.remove("shake");
             }, 500);
 
-            window.setTimeout(updateMessage, 100);
+            window.setTimeout(updateMessage, 200);
         function updateMessage(){
             messageDisplay.classList.add("appear");
             messageDisplay.style.opacity = "1";
@@ -746,10 +205,11 @@ font-weight: normal;
             let messageText = [];
             // Create messages to display
             messageText[0] = "<p>Boots down mama slay diva boss</p>";
-            messageText [1] = "<p>Hiii!!</p>";
+            messageText [1] = "<p>MAMA THAT BURN....</p>";
             messageText [2] = "<p>𝓕𝓡𝓔𝓔 𝓥𝓑𝓤𝓒𝓚𝓢 𝔽ℝ𝔼𝔼 𝕍𝔹𝕌ℂ𝕂𝕊 you could get up to ₂₀₀,₀₀₀ 𝓋𝔟𝔲𝔠𝔨𝔰 FREE OF CHARGE if you follow 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙺</p>";
             messageText [3] = "<p>Mama a girl behind u...</p>";
             messageText [4] = "<p>Skibidi toilet</p>";
+            messageText [5] = "<p>undefined</p>";
             messageText [6] = "<p>I love Hatsune Miku</p>";
             messageText [7] = "<p>hjshdhjhgrfgjs</p>";
             messageText [8] = "<p>Stop poking me!</p>";
@@ -770,8 +230,12 @@ font-weight: normal;
 
             // Display the random message
             messageDisplay.innerHTML = messageText[randomNum];
-        window.setTimeout(eraseMessage, 3000);
+        
+            doll.addEventListener('mouseup', eraseMessage())
         function eraseMessage(){
+            window.setTimeout(eraseDisplay, 3000);
+        }
+        function eraseDisplay(){
             messageDisplay.style.opacity = "0";
         }
     }
