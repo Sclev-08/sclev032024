@@ -41,6 +41,7 @@ h2{
     font-weight: normal;
 }
 #tommytheturkey{
+    width: fit-content;
     font-family: var(--primary-font);
     text-align: center;
     display: block;
@@ -213,6 +214,7 @@ h2{
     text-shadow: 2px 1px 0px #f22b0d;
     padding: 1rem;
     font-family: var(--text-font);
+    font-size: 12pt;
 }
 #pagecontent h2{
     font-family: var(--text-font);
@@ -226,7 +228,6 @@ h2{
     background-position-y: 25px;
 }
 #introduction{
-    font-size: 100%;
     letter-spacing: .5px;
     line-height: 1.7;
     font-family: var(--primary-font);
@@ -255,7 +256,7 @@ h2{
     background: radial-gradient(circle, rgb(224, 221, 204) 0%, rgb(255, 253, 241) 100%);
     color: #39a639;
     padding: 1rem;
-    font-family: var(--text-font);
+    font-family: var(--primary-font);
     box-shadow: inset #e0ddcc 0px 0px 10px 5px;
 }
 /* #keywork .container{
@@ -436,7 +437,7 @@ font-weight: normal;
     color: #fffdf1;
 }
 #subfooter a:hover{
-    color:#c6ffc6;
+    color:#3d993d;
 }
 #keywork a{
     color:#39a639;
