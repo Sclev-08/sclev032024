@@ -9,7 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sofadi+One&display=swapfamily=Jersey+10&display=swap" rel="stylesheet">
     <style>
-    
+        @media screen and (min-width: 1024px){
+            #media{
+                height: 300px;
+            }
+        }
+        iframe{
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 16/9;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        .worksamples{
+            display: none;
+            text-align: center;
+        }
+        #pagecontent .container{
+            background-image: none;
+        }
+        #togglepdfview{
+            border-radius: 1rem;
+            height: 45px;
+            width: 175px;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            font-family: var(--primary-font);
+            font-size: 13pt;
+            border: 1px solid #fd9a36;
+            color: #ef661e;
+            background: rgb(247, 194, 141);
+            background: linear-gradient(143deg, rgba(247, 194, 141, 1) 36%, rgb(255, 210, 166) 69%, rgba(247, 194, 141, 1) 98%);
+        }
     </style>
 </head>
 <body>
@@ -46,6 +79,19 @@
     <main id="pagecontent">
     <div class="container">
         <h2>Certificates</h2>
+        <button id="togglepdfview" onclick="displayToggle()">Toggle PDF View</button>
+        <div class="worksamples">
+            <h2>Typing.com WPM</h2>
+            <iframe src="PDFDocuments/Certificates/wadtypingcomwpmtest.pdf" frameborder="0"></iframe>
+            <h2>Critical Thinking</h2>
+            <iframe src="PDFDocuments/Certificates/culinarycriticalthinkingcertificate.pdf" frameborder="0"></iframe>
+            <h2>Multitasking</h2>
+            <iframe src="PDFDocuments/Certificates/culinarymultitaskingcertificate.pdf" frameborder="0"></iframe>
+            <h2>Leadership</h2>
+            <iframe src="PDFDocuments/Certificates/wadleadershipcertificate.pdf" frameborder="0"></iframe>
+            <h2>Professionalism</h2>
+            <iframe src="PDFDocuments/Certificates/wadprofessionalismcertificate.pdf" frameborder="0"></iframe>
+        </div>
     </div>
     </main>
     <!-- end pagecontent -->
@@ -92,5 +138,13 @@
     <div id="top">
         <a href="#topanchor">back to top?</a>
     </div>
+        <script>  
+        function displayToggle(){
+            let workSamples
+            workSamples = window.document.querySelector(".worksamples");
+            if (workSamples.style.display === "none"){workSamples.style.display = "block";}
+            else{workSamples.style.display = "none";}
+        }
+    </script>
     </body>
     </html>

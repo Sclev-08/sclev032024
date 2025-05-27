@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Scout Cleveland's Page </title>
-    <link rel="stylesheet" href="style.css">
+    <link id="stylelink" rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sofadi+One&display=swapfamily=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/favicon.png" type="image/png"/>
     <style>
-    
+
+    #selstylesheet{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
     </style>
 </head>
 <body>
@@ -53,10 +59,14 @@
             <a href="#career">Career</a> |
             <a href="#semester1">Semester 1</a> |
             <a href="#semester2">Semester 2</a> |
-            <a href="#keyassignments">Key Assignments
-            </a>
+            <a href="#keyassignments">Key Assignments</a>
+            <br>
+            <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+                <option value="style.css">Daylight Theme</option>
+                <option value="sunset.css">Sunset Theme</option>
+            </select>
             </div>
-            </nav>
+        </nav>
             <!-- end topnav -->
     <!-- begin career -->
     <section id="career">
@@ -69,6 +79,9 @@
             <li><a href="Career/References.pdf" target="new">References</a></li>
             <li><a href="Career/Job Application.pdf" target="new">Job Application</a></li>
             <li><a href="Career/Career Action Plan.pdf" target="new">Career Plan</a></li>
+            <li><a href="#" target="new">Recommendation Letter</a></li>
+            <li><a href="worksamples.html">Work Samples</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
     </ul>
     <div id="catgraphic"></div>
     </div>
@@ -122,7 +135,7 @@
                 <a name="keywork"></a>
                 <h2>Key work</h2>
                 <li><a href="Projects/paintingappv5.html" target="new">Painting App</a></li>
-                <li><a href="Demos/HTMLForms/redtheme.css" target="new">HTML Forms</a></li>
+                <li><a href="Demos/HTMLForms/htmlforms.html" target="new">HTML Forms</a></li>
             </div>
             </div>
             <!-- end keywork -->
@@ -221,8 +234,8 @@
             messageText [13] = "<p>𝓕𝓡𝓔𝓔 𝓥𝓑𝓤𝓒𝓚𝓢 𝔽ℝ𝔼𝔼 𝕍𝔹𝕌ℂ𝕂𝕊 you could get up to ₂₀₀,₀₀₀ 𝓋𝔟𝔲𝔠𝔨𝔰 FREE OF CHARGE if you follow 𝚃𝙷𝙸𝚂 𝙻𝙸𝙽𝙺</p>";
             messageText [14] = "<p>OKAY PULL UP GIRL</p>";
             messageText [15] = "<a class='parcielink' target='new' href='https://www.youtube.com/watch?v=sr-_Pfw-Hnc'><p>Sigma boy</p></a>";
-            messageText [15] = "<a class='parcielink' target='new' href='https://youtu.be/B7zDTlQP1-o?si=ZN4UREZCtI6Y2uNJ&t=31'><p>Wanna see a squirrel dropkick a groundhog?</p></a>";
-            messageText [15] = "<p>Where were you when it was time for senior photos!</p>";
+            messageText [16] = "<a class='parcielink' target='new' href='https://youtu.be/B7zDTlQP1-o?si=ZN4UREZCtI6Y2uNJ&t=31'><p>Wanna see a squirrel dropkick a groundhog?</p></a>";
+            messageText [17] = "<p>Where were you when it was time for senior photos!</p>";
 
             //window.alert(messageText.length)
             let randomNum;
@@ -242,6 +255,33 @@
         }
     }
     }
+        //Select the select control (dropdown)
+        let selStylesheet;
+        selStylesheet = document.querySelector('#selstylesheet');
+        //alert(selStylesheet.value);
+
+        let stylelink;
+        styleLink = document.querySelector('#stylelink');
+        // alert(styleLink)
+
+        function updateStylesheet(){
+            // alert(selStylesheet.value)
+            styleLink.href = selStylesheet.value;
+
+            // save to local storage
+            localStorage.setItem('selectedStylesheet2285', selStylesheet.value);
+        }
+
+        window.addEventListener('load', function(){
+            let savedStylesheet = localStorage.getItem('selectedStylesheet2285');
+
+            if(savedStylesheet !== null){
+                // Link to the saved stylesheet
+                styleLink.href = savedStylesheet;
+                // Match the dropbox to saved stylesheet
+                selStylesheet.value = savedStylesheet;
+            }
+        });
     </script>
     <!-- end script -->
     </body>
